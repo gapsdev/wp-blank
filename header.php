@@ -8,6 +8,17 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
+
+<nav class="primary-navigation">
+    <?php
+    wp_nav_menu(array(
+        'theme_location' => 'main-menu',
+        'menu_class'     => 'primary-menu-class',
+        'container'      => 'div',
+        'container_class'=> 'primary-menu-container'
+    ));
+    ?>
+</nav>
     <h1><?php bloginfo('name'); ?></h1>
     <p><?php bloginfo('description'); ?></p>
 </header>
