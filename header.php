@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <header>
 
-<div class="container">
+
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -33,5 +33,5 @@
     </div>
 </nav>
 
-</div>
+
 </header>

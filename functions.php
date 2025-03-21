@@ -33,13 +33,12 @@ function enqueue_training_styles() {
 
     // Enqueue custom CSS
     wp_enqueue_style(
-        'training-style',
-        get_template_directory_uri() . '/assets/css/training.css',
-        array('bootstrap-css'), // Bootstrap as a dependency
-        '1.0',
-        'all'
-    );
-
+      'training-style',
+      get_template_directory_uri() . '/assets/css/training.css',
+      array('bootstrap'), // Specify 'bootstrap' as a dependency if it's enqueued with this handle
+      '1.0',
+      'all'
+  );
     // Enqueue Bootstrap JS (with Popper.js dependency)
     wp_enqueue_script(
         'bootstrap-js',

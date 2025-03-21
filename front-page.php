@@ -1,8 +1,33 @@
 <?php get_header(); ?>
 
-<div class="container">
+<style>
+    .my-container {
+        background: #222831;
+        .row {
+            width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .hero-text h2{
+            color: #fff;
+            font-size: 96px;
+        }
+
+        .hero-text h2 span{
+            color: #00ADB5;
+        }
+    }
+
+    
+</style>
+
+
+
+    <div class="my-container">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 hero-text">
             <?php if( have_rows('hero') ): ?>
                 <?php while( have_rows('hero') ): the_row(); 
 
@@ -29,9 +54,9 @@
                         
                     <?php endwhile; ?>
                 <?php endif; ?>
-               <img src="<?php echo $image_url; ?>" alt="">
+               <img src="<?php echo $image_url; ?>" alt="" class="img-fluid">
         </div>
     </div>
-</div>
+    </div>
 
 <?php get_footer(); ?>
