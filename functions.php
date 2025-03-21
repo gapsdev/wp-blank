@@ -35,7 +35,7 @@ function enqueue_training_styles() {
     wp_enqueue_style(
       'training-style',
       get_template_directory_uri() . '/assets/css/training.css',
-      array('bootstrap'), // Specify 'bootstrap' as a dependency if it's enqueued with this handle
+      array(), // Specify 'bootstrap' as a dependency if it's enqueued with this handle
       '1.0',
       'all'
   );
