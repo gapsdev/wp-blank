@@ -20,7 +20,7 @@
     .header-container {
     padding-top: 200px;
     background: #222831;
-    border: 1px solid rgba(238, 238, 238, 0.1);
+    border-top: 1px solid rgba(238, 238, 238, 0.1);
     
         .row {
             width: 1440px;
@@ -78,6 +78,7 @@
     .aboutme-container {
         background: #222831;
         padding:140px 0 70px 0;
+        border-bottom: 1px solid rgba(238, 238, 238, 0.1);
 
         .aboutme-text h3 {
             font-size:64px;
@@ -114,6 +115,30 @@
             margin:65px 0px 0px 170px;
         }
 
+    }
+
+    .works-container  {
+        background: #222831;
+        padding:140px 0 60px 0;
+
+        .works-bg {
+            background-image: url("http://localhost/wp-training/wp-content/uploads/2025/03/works-pattern-bg.png" );
+            background-size: cover;
+            height:1024px;
+        }
+
+        .works-title {
+            padding-top:280px;
+        }
+        .works-title h3 {
+            font-size: 64px;
+            color: #eee;
+            font-weight: 700;
+            
+        }
+        .works-title h3 span{
+            color: #00ADB5;
+        }
     }
 
 
@@ -189,6 +214,30 @@
             </div>
             <div class="col-lg-6">
                 <img src="<?php echo $aboutme_img_url; ?>" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    
+    <div class="works-container">
+        <div class="works-bg">
+            <div class="row">
+                <div class="col-lg-12 works-title">
+                    <?php if( have_rows('works') ): ?>
+                        <?php while( have_rows('works') ): the_row(); 
+
+                            $works_title = get_sub_field('works_title');
+                            $aboutme_text = get_sub_field('aboutme_text');
+                            
+
+                            $url_link = get_sub_field('works_title');
+
+                            $url_title = get_sub_field('url_title');
+                            ?>
+                            
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <h3><?php echo $works_title; ?></h3>
+                </div>
             </div>
         </div>
     </div>
