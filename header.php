@@ -12,7 +12,9 @@
 <header>
 
 
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+
+   <div class="nav-container">
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Gaps Portfolio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +36,8 @@
         </div>
     </div>
 </nav>
+   </div>
+
 
 
 </header>
