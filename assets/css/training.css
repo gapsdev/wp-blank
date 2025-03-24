@@ -1,2 +1,141 @@
 
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* nav css */
+.nav-container {
+    background: #222931;
+        nav {
+        width: 1440px;
+        background: #222931 !important;
+        margin: 0 auto;
+    }
+}
+
+
+/* header css */
+
+.header-container {
+padding-top: 200px;
+background: #222831;
+border-top: 1px solid rgba(238, 238, 238, 0.1);
+
+    .row {
+        width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .hero-text h2 {
+        color: #fff;
+        font-size: 96px;
+        font-weight: 700;
+        margin-bottom: 48px;
+        line-height: 96px;
+    }
+
+    .hero-text h2 span{
+        color: #00ADB5;
+        
+    }
+
+    .btn-header {
+        display: flex;
+        gap: 24px;
+    }
+    .btn-header a.btn-hire {
+        background: #00ADB5;
+        border: none;
+        padding: 10px 32px;
+        border-radius: 24px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #eee;
+    }
+
+    .btn-header a.btn-download {
+        background: #393E46;
+        border: none;
+        padding: 10px 32px;
+        border-radius: 24px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #eee;
+    }
+
+    .arrow-down {
+        position: absolute;
+        left: 120px;
+        top: 340px;
+    }
+}
+
+/* about me css */
+
+.aboutme-container {
+    background: #222831;
+    padding:140px 0 70px 0;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+
+    .aboutme-text h3 {
+        font-size:64px;
+        font-weight:700;
+        color: #eee;
+    }
+
+    .aboutme-text h3 span {
+        color: #00ADB5;
+    }
+
+    .aboutme-text p{
+        color: #eee;
+        font-size:18px;
+        font-weight: 100;
+        width: 390px;
+    }
+    img.music-note {
+        margin-bottom: 60px;
+    }
+
+    .img-bulb {
+        position: absolute;
+        left: 570px;
+        top: 1174px;
+    }
+
+    .aboutme-text p a {
+        color: #eee;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .arrow-up {
+        margin:65px 0px 0px 170px;
+    }
+
+}
+
+.works-container  {
+    background: #222831;
+    padding:140px 0 60px 0;
+
+    .works-bg {
+        background-image: url("http://localhost/wp-training/wp-content/uploads/2025/03/works-pattern-bg.png" );
+        background-size: cover;
+        height:1024px;
+    }
+
+    .works-title {
+        padding-top:280px;
+    }
+    .works-title h3 {
+        font-size: 64px;
+        color: #eee;
+        font-weight: 700;
+        
+    }
+    .works-title h3 span{
+        color: #00ADB5;
+    }
+}
