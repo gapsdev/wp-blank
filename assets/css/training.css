@@ -78,7 +78,10 @@ border-top: 1px solid rgba(238, 238, 238, 0.1);
     background: #222831;
     padding:140px 0 70px 0;
     border-bottom: 1px solid rgba(238, 238, 238, 0.1);
-
+    .row {
+        width: 1440px;
+        margin: 0 auto;
+    }
     .aboutme-text h3 {
         font-size:64px;
         font-weight:700;
@@ -119,7 +122,10 @@ border-top: 1px solid rgba(238, 238, 238, 0.1);
 .works-container  {
     background: #222831;
     padding:140px 0 60px 0;
-
+    .row {
+        width: 1440px;
+        margin: 0 auto;
+    }
     .works-bg {
         background-image: url("http://localhost/wp-training/wp-content/uploads/2025/03/works-pattern-bg.png" );
         background-size: cover;

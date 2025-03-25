@@ -36,7 +36,7 @@ function enqueue_training_styles() {
       'training-style',
       get_template_directory_uri() . '/assets/css/training.css',
       array(), // Specify 'bootstrap' as a dependency if it's enqueued with this handle
-      '1.0',
+      null,
       'all'
   );
     // Enqueue Bootstrap JS (with Popper.js dependency)
@@ -52,8 +52,8 @@ function enqueue_training_styles() {
     wp_enqueue_script(
         'training-script',
         get_template_directory_uri() . '/assets/js/training.js',
-        array('bootstrap-js'), // Bootstrap as a dependency
-        '1.0',
+        array(), // Bootstrap as a dependency
+        null,
         true
     );
 
