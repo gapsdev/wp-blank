@@ -1,15 +1,12 @@
 <?php get_header(); ?>
 
-<style>
-
-
-</style>
     <div class="header-container">
         <div class="row">
-            <div class="col-lg-6 hero-text">
-                <img src="http://localhost/wp-training/wp-content/uploads/2025/03/curly-arrow.png" alt="" class="arrow-down">
-                <?php if( have_rows('hero') ): ?>
-                    <?php while( have_rows('hero') ): the_row(); 
+            <div class="col-lg-6 col-md-6 hero-text">
+                <div class="thumb-text">
+                    <img src="http://localhost/wp-training/wp-content/uploads/2025/03/curly-arrow.png" alt="" class="arrow-down">
+                        <?php if( have_rows('hero') ): ?>
+                        <?php while( have_rows('hero') ): the_row(); 
 
                         $hero_title = get_sub_field('hero_title');
                         $hero_text = get_sub_field('hero_text');
@@ -22,16 +19,19 @@
                         ?>
                         
                     <?php endwhile; ?>
-                <?php endif; ?>
-                <h2><?php echo $hero_title; ?></h2>
+                    <?php endif; ?>
+                    <div class="text-btn">
+                    <h2><?php echo $hero_title; ?></h2>
+                            <div class="btn-header">
+                                <a href="<?php echo $button_url; ?>" class="btn btn-primary btn-hire"><?php echo $button_text; ?></a>
 
-                <div class="btn-header">
-                    <a href="<?php echo $button_url; ?>" class="btn btn-primary btn-hire"><?php echo $button_text; ?></a>
-
-                    <a href="<?php echo $button_download_url; ?>" class="btn btn-primary btn-download"><?php echo $button_text_download; ?> <img src="<?php echo $download_icon; ?>" alt=""></a>
+                                <a href="<?php echo $button_download_url; ?>" class="btn btn-primary btn-download"><?php echo $button_text_download; ?> <img src="<?php echo $download_icon; ?>" alt=""></a>
+                            </div>
+                    </div>
                 </div>
+                
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <?php if( have_rows('hero') ): ?>
                         <?php while( have_rows('hero') ): the_row(); 
 
@@ -49,7 +49,7 @@
 
     <div class="aboutme-container">
         <div class="row">
-            <div class="col-lg-6 aboutme-text">
+            <div class="col-lg-6 col-md-6 aboutme-text">
                 <?php if( have_rows('about_me') ): ?>
                     <?php while( have_rows('about_me') ): the_row(); 
 
@@ -65,14 +65,14 @@
                     <?php endwhile; ?>
                 <?php endif; ?>
                 <img src="http://localhost/wp-training/wp-content/uploads/2025/03/music-note.png" alt="" class="music-note">
-                <h3><?php echo $aboutme_title; ?></h3>
-                <div class="img-bulb">
-                    <img src="http://localhost/wp-training/wp-content/uploads/2025/03/lightbulb.png" alt="" class="light-bulb">
+                <div class="text-icon">
+                    <h3><?php echo $aboutme_title; ?> </h3>
+                    <img src="http://localhost/wp-training/wp-content/uploads/2025/03/lightbulb.png" alt="" class="img-fluid">
                 </div>
                 <p><?php echo $aboutme_text; ?> <a href="<?php echo $url_link; ?>"><?php echo $url_title; ?></a></p>
                 <img src="http://localhost/wp-training/wp-content/uploads/2025/03/arrow-up.png" alt="" class="arrow-up">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <img src="<?php echo $aboutme_img_url; ?>" alt="" class="img-fluid">
             </div>
         </div>
@@ -86,18 +86,35 @@
                         <?php while( have_rows('works') ): the_row(); 
 
                             $works_title = get_sub_field('works_title');
-                            $aboutme_text = get_sub_field('aboutme_text');
-                            
-
-                            $url_link = get_sub_field('works_title');
-
-                            $url_title = get_sub_field('url_title');
                             ?>
                             
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <h3><?php echo $works_title; ?></h3>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contactus-container">
+        <div class="row">
+            <div class="col-lg-6 contact-title">
+                    <?php if( have_rows('contact_us') ): ?>
+                        <?php while( have_rows('contact_us') ): the_row(); 
+
+                            $contact_title = get_sub_field('contact_title');
+                            $contact_img = get_sub_field('contact_img');
+                        
+                            ?>
+                            
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <h3><?php echo $contact_title; ?></h3>
+                <img src="<?php echo $contact_img; ?>" alt="" class="img-fluid  ">
+            </div>
+            <div class="col-lg-6">
+                <img src="http://localhost/wp-training/wp-content/uploads/2025/03/keyboard.png" alt="" class="img-fluid">
             </div>
         </div>
     </div>
