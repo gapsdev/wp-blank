@@ -21,6 +21,7 @@ add_action('init', 'register_my_menus');
 
 // Enqueue styles and scripts
 /////////// ENQUEE STYLE AND SCRIPT /////
+
 function enqueue_training_styles() { 
     // Enqueue Bootstrap CSS
     wp_enqueue_style(

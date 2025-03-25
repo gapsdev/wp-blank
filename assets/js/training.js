@@ -1,7 +1,7 @@
 (function($) {
-    $(document).ready(function() {
-    ///
-    
-    ///
-    })
+    $(function(){
+        $('#Container').mixItUp();
+    });
     })(jQuery);
+
+    
