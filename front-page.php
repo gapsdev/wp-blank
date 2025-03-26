@@ -93,33 +93,82 @@
                     <h3><?php echo $works_title; ?></h3>
                 </div>
 
-                <div class="col-lg-12 controls">
-                    <label>Filter:</label>
-                    
-                    <button class="filter" data-filter="all">All</button>
-                    <button class="filter" data-filter=".category-1">Category 1</button>
-                    <button class="filter" data-filter=".category-2">Category 2</button>
-                    </div>
+            <div class="col-lg-12">
+                <div class="portfolio-container">
+                    <?php if( have_rows('portfolio_group') ): ?>
+                    <?php while( have_rows('portfolio_group') ): the_row(); 
+                    // Get sub field values.
+                        // mixit start 
+                    ?>
 
-                    <div class="pager-list">
-                        <!-- Pagination buttons will be generated here -->
-                    </div>
+                        <!-- mixitstart  -->
+                        <div class="controls">
+                            <label>Filter:</label>
+                            <button class="filter" data-filter="all">All</button>
+
+                            <?php 
+                            // Check rows exists.
+                            if( have_rows('portfolio_repeater') ):
+
+                                // Loop through rows.
+                                while( have_rows('portfolio_repeater') ) : the_row();
+
+                                    // Load sub field value.
+                                    $filter = get_sub_field('filter');
+                                    // Do something, but make sure you escape the value if outputting directly...
+                                    
+                                    ?>
+                                    <button class="filter" data-filter=".<?php echo $filter;?>"><?php echo $filter;?></button>
+                                    <?php 
+                                // End loop.
+                                endwhile;
+
+                            // No value.
+                            else :
+                                // Do something...
+                            endif;
+                            ?>
+                        </div>
+
+                        <div class="pager-list">
+                            <!-- Pagination buttons will be generated here -->
+                        </div>
 
 
 
-                    <div id="Container" class="container">
-                    <div class="mix category-1" data-myorder="1"></div>
-                    <div class="mix category-1" data-myorder="2"></div>
-                    <div class="mix category-1" data-myorder="3"></div>
-                    <div class="mix category-2" data-myorder="4"></div>
-                    <div class="mix category-1" data-myorder="5"></div>
-                    <div class="mix category-1" data-myorder="6"></div>
-                    <div class="mix category-2" data-myorder="7"></div>
-                    <div class="mix category-2" data-myorder="8"></div>
-                    
-                    <div class="gap"></div>
-                    <div class="gap"></div>
-                    </div>
+                        <div id="Container" class="container">
+                            <?php 
+                                // Check rows exists.
+                                if( have_rows('portfolio_repeater') ):
+
+                                    // Loop through rows.
+                                    while( have_rows('portfolio_repeater') ) : the_row();
+
+                                        // Load sub field value.
+                                        $filter = get_sub_field('filter');
+                                        $image = get_sub_field('image');
+                                        // Do something, but make sure you escape the value if outputting directly...
+                                        
+                            ?>
+                                        
+                                <div class="mix <?php echo $filter;?>" ><img src="<?php echo $image;?>" alt=""></div>
+                            <?php 
+                                // End loop.
+                                endwhile;
+                                // No value.
+                                else :
+                                // Do something...
+                                endif;
+                            ?>
+                            <div class="gap"></div>
+                            <div class="gap"></div>
+                        </div>
+
+                        <!-- mitit end  -->
+        
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
@@ -143,6 +192,10 @@
             </div>
             <div class="col-lg-6">
                 <img src="http://localhost/wp-training/wp-content/uploads/2025/03/keyboard.png" alt="" class="img-fluid">
+
+                <div class="contact-form">
+                    <?php echo do_shortcode('[fluentform id="3"]');?>
+                </div>
             </div>
         </div>
     </div>

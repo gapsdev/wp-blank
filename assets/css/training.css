@@ -166,90 +166,35 @@ body {
     color: #00adb5;
   }
 
-  .controls {
-    padding: 2%;
-    background: #333;
+  .contact-form label {
     color: #eee;
+    font-size: 18px;
   }
 
-  label {
-    font-weight: 300;
-    margin: 0 0.4em 0 0;
-  }
-
-  button {
-    display: inline-block;
-    padding: 0.4em 0.8em;
-    background: #666;
-    border: 0;
-    color: #ddd;
-    font-size: 16px;
-    font-weight: 300;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  button.active {
-    background: #68b8c4;
-  }
-
-  button:focus {
-    outline: 0 none;
-  }
-
-  button + label {
-    margin-left: 1em;
-  }
-
-  .container {
-    padding: 2% 2% 0;
-    text-align: justify;
-    font-size: 0.1px;
-    background: #68b8c4;
-    -webkit-backface-visibility: hidden;
-  }
-
-  .container:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-  }
-
-  .container .mix,
-  .container .gap {
-    display: inline-block;
-    width: 49%;
-  }
-
-  .container .mix {
-    text-align: left;
-    background: #03899c;
-    margin-bottom: 2%;
-    display: none;
-  }
-
-  .container .mix.category-1 {
-    border-top: 2px solid limegreen;
-  }
-
-  .container .mix.category-2 {
-    border-top: 2px solid yellow;
-  }
-
-  .container .mix:after {
-    content: attr(data-myorder);
-    color: white;
-    font-size: 16px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 4% 6%;
+  .contact-form input {
+    background: rgba(57, 62, 70, 0.5);
+    border-radius: 16px;
+    padding: 16px 24px;
+    color: rgba(238, 238, 238, 0.5);
     font-weight: 700;
+    border: none;
+  }
+  .contact-form textarea {
+    background: rgba(57, 62, 70, 0.5);
+    border-radius: 16px;
+    padding: 16px 24px;
+    color: rgba(238, 238, 238, 0.5);
+    font-weight: 700;
+    border: none;
+    height: 280px;
   }
 
-  .container .mix:before {
-    content: "";
-    display: inline-block;
-    padding-top: 60%;
+  button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style {
+    background: #00adb5 !important;
+    padding: 10px 32px;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 
@@ -362,6 +307,10 @@ body {
 
     .aboutme-text p {
       width: auto;
+    }
+
+    .arrow-up {
+      display: none;
     }
   }
 }
