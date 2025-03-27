@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="aboutme-container">
+    <div class="aboutme-container" id="about">
         <div class="row">
             <div class="col-lg-6 col-md-6 aboutme-text">
                 <?php if( have_rows('about_me') ): ?>
@@ -78,7 +78,7 @@
         </div>
     </div>
     
-    <div class="works-container">
+    <div class="works-container" id="portfolio">
         <div class="works-bg">
             <div class="row">
                 <div class="col-lg-12 works-title">
@@ -175,7 +175,7 @@
     </div>
 
 
-    <div class="contactus-container">
+    <div class="contactus-container" id="contact"> 
         <div class="row">
             <div class="col-lg-12">
                 <img src="http://localhost/wp-training/wp-content/uploads/2025/03/keyboard.png" alt="" class="img-fluid keyboard">
@@ -199,6 +199,8 @@
               
                 <div class="contact-form">
                     <?php echo do_shortcode('[fluentform id="3"]');?>
+
+                    <img src="http://localhost/wp-training/wp-content/uploads/2025/03/mail.png" alt="" class="img-fluid mail">
                 </div>
             </div>
         </div>

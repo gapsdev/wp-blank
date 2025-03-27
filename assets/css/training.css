@@ -4,11 +4,14 @@ body {
 /* nav css */
 .nav-container {
   background: #222931;
+
   nav {
     width: 1440px;
     background: #222931 !important;
     margin: 0 auto;
+    padding: 48px 0;
   }
+
   .navbar-collapse {
     flex-grow: 0;
   }
@@ -243,6 +246,11 @@ body {
     font-size: 18px;
     font-weight: 600;
   }
+
+  .mail {
+    position: relative;
+    left: 550px;
+  }
 }
 
 /* footer */
@@ -313,6 +321,10 @@ body {
     .row {
       width: auto;
     }
+
+    .portfolio-items {
+      flex-wrap: wrap;
+    }
   }
   .contactus-container {
     .row {
@@ -357,6 +369,47 @@ body {
     }
 
     .arrow-up {
+      display: none;
+    }
+  }
+  .contactus-container {
+    .keyboard {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 430px) {
+  .works-container {
+    .portfolio-items {
+      flex-direction: column;
+    }
+
+    .works-title {
+      padding-top: 50px;
+    }
+  }
+
+  .footer-container {
+    footer .footer-nav {
+      flex-direction: column;
+    }
+    .copyright p {
+      color: #eee;
+      text-align: center;
+      margin-bottom: 0px;
+      padding: 48px 0px;
+    }
+  }
+
+  .contactus-container {
+    button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style {
+      width: 100%;
+    }
+
+    .contact-title {
+      padding-top: 100px;
+    }
+    .mail {
       display: none;
     }
   }
