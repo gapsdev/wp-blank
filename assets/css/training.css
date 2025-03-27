@@ -140,9 +140,51 @@ body {
     font-size: 64px;
     color: #eee;
     font-weight: 700;
+    padding-bottom: 16px;
   }
   .works-title h3 span {
     color: #00adb5;
+  }
+
+  .portfolio-container .controls .filter {
+    border-radius: 24px;
+    background: rgba(57, 62, 70, 0.5);
+    border: none;
+    color: #eee;
+    font-size: 18px;
+    padding: 10px 32px;
+    font-weight: 600;
+  }
+
+  .portfolio-items {
+    display: flex;
+    gap: 48px;
+    margin: 0px;
+  }
+  .controls {
+    padding-bottom: 48px;
+  }
+  .controls button:active {
+    background-color: #007981 !important; /* Even darker shade for active state */
+    transform: scale(0.95) !important; /* Adds a subtle press effect */
+  }
+
+  .controls button:hover {
+    background-color: #008f99 !important;
+  }
+
+  .controls button.active {
+    background-color: #008f99 !important;
+  }
+
+  .mix {
+    display: none;
+  }
+  .mix img {
+    padding: 40px;
+    background: rgba(57, 62, 70, 0.5);
+    border-radius: 16px;
+    width: 100%;
   }
 }
 
@@ -150,7 +192,7 @@ body {
 
 .contactus-container {
   background: #222831;
-  padding: 140px 0 150px 0;
+  padding: 160px 0 150px 0;
   .row {
     width: 1440px;
     margin: 0 auto;
@@ -164,6 +206,11 @@ body {
 
   .contact-title h3 span {
     color: #00adb5;
+  }
+  .keyboard {
+    position: relative;
+    left: 840px;
+    bottom: 100px;
   }
 
   .contact-form label {

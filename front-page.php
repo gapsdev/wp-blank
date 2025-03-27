@@ -93,7 +93,7 @@
                     <h3><?php echo $works_title; ?></h3>
                 </div>
 
-            <div class="col-lg-12">
+                <div class="col-lg-12 ">
                 <div class="portfolio-container">
                     <?php if( have_rows('portfolio_group') ): ?>
                     <?php while( have_rows('portfolio_group') ): the_row(); 
@@ -103,8 +103,7 @@
 
                         <!-- mixitstart  -->
                         <div class="controls">
-                            <label>Filter:</label>
-                            <button class="filter" data-filter="all">All</button>
+                            <button class="filter active" data-filter="all">All</button>
 
                             <?php 
                             // Check rows exists.
@@ -136,7 +135,7 @@
 
 
 
-                        <div id="Container" class="container">
+                        <div id="Container" class="portfolio-items">
                             <?php 
                                 // Check rows exists.
                                 if( have_rows('portfolio_repeater') ):
@@ -151,7 +150,8 @@
                                         
                             ?>
                                         
-                                <div class="mix <?php echo $filter;?>" ><img src="<?php echo $image;?>" alt=""></div>
+                                <div class="mix col-lg-4  col-md-4 col-sm-2 <?php echo $filter;?>" ><img src="<?php echo $image;?>" alt="" class="img-fluid">
+                                </div>
                             <?php 
                                 // End loop.
                                 endwhile;
@@ -169,6 +169,7 @@
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
+                </div>
             </div>
         </div>
     </div>
@@ -176,6 +177,10 @@
 
     <div class="contactus-container">
         <div class="row">
+            <div class="col-lg-12">
+                <img src="http://localhost/wp-training/wp-content/uploads/2025/03/keyboard.png" alt="" class="img-fluid keyboard">
+
+            </div>
             <div class="col-lg-6 contact-title">
                     <?php if( have_rows('contact_us') ): ?>
                         <?php while( have_rows('contact_us') ): the_row(); 
@@ -188,11 +193,10 @@
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <h3><?php echo $contact_title; ?></h3>
-                <img src="<?php echo $contact_img; ?>" alt="" class="img-fluid  ">
+                    <img src="<?php echo $contact_img; ?>" alt="" class="img-fluid  ">
             </div>
             <div class="col-lg-6">
-                <img src="http://localhost/wp-training/wp-content/uploads/2025/03/keyboard.png" alt="" class="img-fluid">
-
+              
                 <div class="contact-form">
                     <?php echo do_shortcode('[fluentform id="3"]');?>
                 </div>
